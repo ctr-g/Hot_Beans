@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="JobApp.css">
+</head>
+<body>
+
+  <div class="topnav">
+    <div class="nav-left">
+      <img src="24.03.2026 logo.png" alt="Hot Beans Logo">
+      <h1>Hot Beans</h1>
+    </div>
+
+<div class="nav-center">
+  <a href="index.html">Home</a>
+  <a href="Our Web Developers.html">Our Web Developers</a>
+  <a href="Job Opportunities.html">Job Opportunities</a>
+  <span class="current-page">Job Application</span>
+  <a href="Web Development Courses.html">Web Development Courses</a>
+</div>
+
+    <div class="nav-right">
+      <a href="Login.html">Account</a>
+    </div>
+  </div>
+
+  <div class="form-wrapper">
+    <div class="card-content">
+      <div class="form-inner">
+        <h3>Job Application Form</h3>
+        <p>Please fill out the form below to apply for a job.</p>
+
+        <form id="jobForm">
+          <p>Please Select a Job Opportunity</p>
+
+          <select id="job" name="job" required>
+            <option value="">--Select a Job--</option>
+            <option value="Front-End Developer">Front-End Developer</option>
+            <option value="UI/UX Developer">UI/UX Developer</option>
+            <option value="Junior Web Developer">Junior Web Developer</option>
+            <option value="Back-End Developer">Back-End Developer</option>
+            <option value="Full-Stack Developer">Full-Stack Developer</option>
+            <option value="Web Tester">Web Tester</option>
+          </select>
+
+          <div class="job-details">
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="qualifications">Qualifications:</label>
+            <input type="text" id="qualifications" name="qualifications" required>
+
+            <label for="experience">Years of Experience:</label>
+            <input type="number" id="experience" name="experience" min="0" max="50" required>
+
+            <label for="skills">Skills / Technologies Known:</label>
+            <input type="text" id="skills" name="skills" required>
+
+            <label>Upload Your CV:</label>
+            <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
+
+            <label for="message">Cover Letter / Message:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+
+            <button type="submit" id="submitBtn" class="card-button">Apply</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const jobSelect = document.getElementById('job');
+    const jobDetails = document.querySelector('.job-details');
+    const jobForm = document.getElementById('jobForm');
+    const submitBtn = document.getElementById('submitBtn');
+
+    function isLoggedIn() {
+      return localStorage.getItem("loggedIn") === "true";
+    }
+
+    jobSelect.addEventListener('change', () => {
+      if (jobSelect.value) {
+        jobDetails.classList.add('active');
+      } else {
+        jobDetails.classList.remove('active');
+      }
+    });
+
+    window.addEventListener("load", () => {
+      if (!isLoggedIn()) {
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Login required to apply";
+      }
+    });
+
+    jobForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      if (!isLoggedIn()) {
+        alert("You must be logged in to submit an application.");
+        window.location.href = "Login.html";
+        return;
+      }
+
+      alert("Your application has been submitted!");
+      jobForm.reset();
+      jobDetails.classList.remove('active');
+    });
+  </script>
+
+</body>
+</html>

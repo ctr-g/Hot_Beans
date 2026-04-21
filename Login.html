@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Hot Beans</title>
+  <link rel="stylesheet" href="LogIn.css">
+</head>
+
+<body>
+
+<p id="status"></p>
+
+<button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+
+<div class="box" id="loginBox">
+  <h2>Login</h2>
+
+  <input type="text" id="loginUser" placeholder="Username">
+  <input type="password" id="loginPass" placeholder="Password">
+
+  <button onclick="login()">Log In</button>
+
+  <p>Don't have an account? 
+    <a onclick="showSignup()">Sign up</a>
+  </p>
+</div>
+
+<div class="box hidden" id="signupBox">
+  <h2>Sign Up</h2>
+
+  <input type="text" id="signupUser" placeholder="Username">
+  <input type="password" id="signupPass" placeholder="Password">
+  <input type="password" id="confirmPass" placeholder="Confirm Password">
+
+  <button onclick="signup()">Create Account</button>
+
+  <p>Already have an account? 
+    <a onclick="showLogin()">Login</a>
+  </p>
+</div>
+
+<script>
+  function showSignup() {
+    document.getElementById("loginBox").classList.add("hidden");
+    document.getElementById("signupBox").classList.remove("hidden");
+  }
+
+  function showLogin() {
+    document.getElementById("signupBox").classList.add("hidden");
+    document.getElementById("loginBox").classList.remove("hidden");
+  }
+
+  function signup() {
+    const username = document.getElementById("signupUser").value.trim();
+    const password = document.getElementById("signupPass").value.trim();
+    const confirmPassword = document.getElementById("confirmPass").value.trim();
+
+    if (!username || !password || !confirmPassword) {
+      alert("Please fill in all fields");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
+
+    if (localStorage.getItem("user_" + username)) {
+      alert("Username already exists");
+      return;
+    }
+
+    localStorage.setItem("user_" + username, password);
+
+    alert("Account created! You can now log in.");
+    showLogin();
+  }
+
+  function login() {
+    const username = document.getElementById("loginUser").value.trim();
+    const password = document.getElementById("loginPass").value.trim();
+
+    const storedPassword = localStorage.getItem("user_" + username);
+
+    if (storedPassword === password) {
+      localStorage.setItem("loggedInUser", username);
+
+      document.getElementById("status").innerText =
+        "Logged in as: " + username;
+
+      window.location.href = "Job Application.html";
+    } else {
+      alert("Incorrect username or password");
+    }
+  }
+
+  function logout() {
+    localStorage.removeItem("loggedInUser");
+    alert("Logged out!");
+    window.location.href = "Login.html";
+  }
+
+  window.onload = function () {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    const status = document.getElementById("status");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    if (loggedInUser) {
+      status.innerText = "Logged in as: " + loggedInUser;
+      document.getElementById("loginBox").style.display = "none";
+      logoutBtn.style.display = "block";
+    } else {
+      status.innerText = "Not logged in";
+      logoutBtn.style.display = "none";
+    }
+  };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot Beans - Web Development Courses</title>
+  <link rel="stylesheet" href="WebDevCourses.css">
+</head>
+<body>
+  <div class="topnav">
+    <div class="nav-left">
+      <img src="24.03.2026 logo.png" alt="Hot Beans Logo">
+      <h1>Hot Beans</h1>
+    </div>
+    <div class="nav-center">
+      <a href="index.html">Home</a>
+      <a href="Our Web Developers.html">Our Web Developers</a>
+      <a href="Job Opportunities.html">Job Opportunities</a>
+      <a href="Job Application.html">Job Application</a>
+      <span class="current-page">Web Development Courses</span>
+    </div>
+    <div class="nav-right">
+      <a href="Login.html">Account</a>
+    </div>
+  </div>
+  <div class="courses-container">
+    <h2>Recommended Web Development Courses</h2>
+    <div id="page1" class="page active">
+      <div class="course-card">
+        <h3>freeCodeCamp Full Curriculum</h3>
+        <p>Learn web development step by step with hands-on projects covering HTML, CSS, JavaScript, React, Node.js, and databases.</p>
+        <p class="price">Price: Free</p>
+        <a href="https://www.freecodecamp.org/learn" target="_blank" class="button">Go to Course</a>
+      </div>
+      <div class="course-card">
+        <h3>The Odin Project</h3>
+        <p>Project-focused full-stack path teaching HTML, CSS, JavaScript, and backend basics.</p>
+        <p class="price">Price: Free</p>
+        <a href="https://www.theodinproject.com/paths/full-stack-javascript" target="_blank" class="button">Go to Course</a>
+      </div>
+      <div class="course-card">
+        <h3>freeCodeCamp YouTube Full Web Dev</h3>
+        <p>Step-by-step video tutorials covering HTML, CSS, JavaScript, and beginner React projects.</p>
+        <p class="price">Price: Free</p>
+        <a href="https://www.youtube.com/c/Freecodecamp" target="_blank" class="button">Go to Course</a>
+      </div>
+    </div>
+    <div id="page2" class="page">
+      <div class="course-card">
+        <h3>Great Learning Full Stack</h3>
+        <p>Structured course covering HTML, CSS, JavaScript, and React basics with mini-projects.</p>
+        <p class="price">Price: Free</p>
+        <a href="https://www.mygreatlearning.com/full-stack-web-development/free-courses" target="_blank" class="button">Go to Course</a>
+      </div>
+      <div class="course-card">
+        <h3>Codecademy Interactive</h3>
+        <p>Learn HTML, CSS, JavaScript, and backend fundamentals interactively with instant feedback.</p>
+        <p class="price">Price: Free / Optional Paid</p>
+        <a href="https://www.codecademy.com/learn/paths/web-development" target="_blank" class="button">Go to Course</a>
+      </div>
+      <div class="course-card">
+        <h3>Reed Web Dev Training</h3>
+        <p>Affordable structured course teaching HTML, CSS, JavaScript, and backend basics.</p>
+        <p class="price">Price: ~£19</p>
+        <a href="https://www.reed.co.uk/courses/web-development-training/402145" target="_blank" class="button">Go to Course</a>
+      </div>
+    </div>
+    <div id="page3" class="page">
+      <div class="course-card">
+        <h3>The Web Developer Bootcamp (Udemy)</h3>
+        <p>Comprehensive bootcamp covering HTML, CSS, JavaScript, Node, Express, and MongoDB.</p>
+        <p class="price">Paid (Discounted)</p>
+        <a href="https://www.udemy.com/course/the-web-developer-bootcamp/" target="_blank" class="button">Go to Course</a>
+      </div>
+      <div class="course-card">
+        <h3>HTML, CSS & JavaScript (Coursera)</h3>
+        <p>University-led course teaching modern web fundamentals with hands-on exercises.</p>
+        <p class="price">Paid (Audit Free Option)</p>
+        <a href="https://www.coursera.org/learn/html-css-javascript-for-web-developers" target="_blank" class="button">Go to Course</a>
+      </div>
+      <div class="course-card">
+        <h3>Meta Front-End Developer (Coursera)</h3>
+        <p>Professional certificate covering frontend fundamentals and React.</p>
+        <p class="price">Paid</p>
+        <a href="https://www.coursera.org/professional-certificates/meta-front-end-developer" target="_blank" class="button">Go to Course</a>
+      </div>
+    </div>
+    <div class="page-buttons">
+      <button onclick="showPage(1)">1</button>
+      <button onclick="showPage(2)">2</button>
+      <button onclick="showPage(3)">3</button>
+    </div>
+  </div>
+<script>
+  function showPage(pageNumber){
+    document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
+    document.getElementById('page' + pageNumber).classList.add('active');
+  }
+</script>
+</body>
+</html>

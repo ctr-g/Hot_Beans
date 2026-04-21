@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hot Beans - Job Opportunities</title>
+  <link rel="stylesheet" href="JobOpp.css">
+</head>
+<body>
+
+  <div class="topnav">
+    <div class="nav-left">
+      <img src="24.03.2026 logo.png" alt="Hot Beans Logo">
+      <h1>Hot Beans</h1>
+    </div>
+
+<div class="nav-center">
+  <a href="index.html">Home</a>
+  <a href="Our Web Developers.html">Our Web Developers</a>
+  <span class="current-page">Job Opportunities</span>
+  <a href="Job Application.html">Job Application</a>
+  <a href="Web Development Courses.html">Web Development Courses</a>
+</div>
+
+    <div class="nav-right">
+      <a href="Login.html">Account</a>
+    </div>
+  </div>
+
+<script>
+function showPage(pageNumber){
+  let pages = document.querySelectorAll(".page");
+  pages.forEach(function(page){ page.style.display = "none"; });
+  document.getElementById("page" + pageNumber).style.display = "flex";
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  showPage(1);
+});
+</script>
+
+<div id="page1" class="card-container page">
+
+  <div class="card">
+    <div class="badge-container">
+    </div>
+    <h3>Front-End Developer</h3>
+    <p><strong>Location:</strong> London / Remote</p>
+    <p><strong>Job Description:</strong> Build and maintain user-facing web interfaces, implement responsive designs, fix bugs, and optimise performance.</p>
+    <p><strong>Qualifications:</strong> 1–2 A-levels (or equivalent) for HND/foundation degree, or 2–3 A-levels for a bachelor’s degree.</p>
+    <p><strong>Required Skills:</strong></p>
+    <ul>
+      <li>HTML5, CSS3, JavaScript</li>
+      <li>Frameworks like React, Vue, or Angular</li>
+      <li>Responsive design and cross-browser compatibility</li>
+      <li>Git/version control</li>
+    </ul>
+    <p><strong>Hours:</strong> 37–40 hours/week, Monday–Friday</p>
+    <p><strong>Annual Salary:</strong> £50,000–£65,000</p>
+    <button onclick="location.href='Job Application.html'">Apply</button>
+  </div>
+
+  <div class="card">
+    <div class="badge-container">
+    </div>
+    <h3>UI/UX Developer</h3>
+    <p><strong>Location:</strong> London / Hybrid</p>
+    <p><strong>Job Description:</strong> Combine user interface design with front-end coding; design intuitive interfaces and implement them using HTML/CSS/JS.</p>
+    <p><strong>Qualifications:</strong> Degree or relevant experience in design, computing, or HCI. Portfolio essential.</p>
+    <p><strong>Required Skills:</strong></p>
+    <ul>
+      <li>UI/UX design principles</li>
+      <li>HTML, CSS, JavaScript</li>
+      <li>Responsive & accessible design</li>
+      <li>Collaboration and communication skills</li>
+    </ul>
+    <p><strong>Hours:</strong> 37–40 hours/week, flexible/hybrid working</p>
+    <p><strong>Annual Salary:</strong> £45,000–£65,000</p>
+    <button onclick="location.href='Job Application.html'">Apply</button>
+  </div>
+
+  <div class="card">
+    <div class="badge-container">
+    </div>
+    <h3>Junior Web Developer</h3>
+    <p><strong>Location:</strong> London / Remote</p>
+    <p><strong>Job Description:</strong> Support development team by building simple web pages, testing functionality, and learning coding best practices.</p>
+    <p><strong>Qualifications:</strong> GCSEs in Maths & English; BTEC or apprenticeship helpful. Portfolio preferred.</p>
+    <p><strong>Required Skills:</strong></p>
+    <ul>
+      <li>Basic HTML, CSS, JavaScript</li>
+      <li>Willingness to learn frameworks</li>
+      <li>Problem-solving and debugging</li>
+    </ul>
+    <p><strong>Hours:</strong> 37 hours/week</p>
+    <p><strong>Annual Salary:</strong> £20,000–£40,000</p>
+    <button onclick="location.href='Job Application.html'">Apply</button>
+  </div>
+
+</div>
+
+<div id="page2" class="card-container page" style="display:none;">
+
+  <div class="card">
+    <div class="badge-container">
+    </div>
+    <h3>Back-End Developer</h3>
+    <p><strong>Location:</strong> London / Remote</p>
+    <p><strong>Job Description:</strong> Develop server-side logic, database structures, APIs, and ensure high performance of web applications.</p>
+    <p><strong>Qualifications:</strong> Degree in Computer Science or equivalent; portfolio or projects preferred.</p>
+    <p><strong>Required Skills:</strong></p>
+    <ul>
+      <li>Node.js, Python, or Java</li>
+      <li>SQL/NoSQL databases</li>
+      <li>API design & security</li>
+      <li>Version control (Git)</li>
+    </ul>
+    <p><strong>Hours:</strong> 37–40 hours/week</p>
+    <p><strong>Annual Salary:</strong> £50,000–£75,000</p>
+    <button onclick="location.href='Job Application.html'">Apply</button>
+  </div>
+
+  <div class="card">
+    <div class="badge-container">
+    </div>
+    <h3>Full-Stack Developer</h3>
+    <p><strong>Location:</strong> London / Remote</p>
+    <p><strong>Job Description:</strong> Work on both front-end and back-end, building complete web applications and collaborating with design and QA teams.</p>
+    <p><strong>Qualifications:</strong> Degree or bootcamp experience; portfolio essential.</p>
+    <p><strong>Required Skills:</strong></p>
+    <ul>
+      <li>HTML, CSS, JavaScript, React</li>
+      <li>Node.js, Express, Python or Java</li>
+      <li>Database management (SQL/NoSQL)</li>
+      <li>Git/version control</li>
+    </ul>
+    <p><strong>Hours:</strong> 37–40 hours/week</p>
+    <p><strong>Annual Salary:</strong> £55,000–£65,000</p>
+    <button onclick="location.href='Job Application.html'">Apply</button>
+  </div>
+
+  <div class="card">
+    <h3>Web Tester</h3>
+    <p><strong>Location:</strong> London / On-site</p>
+    <p><strong>Job Description:</strong> Test web applications, report bugs, ensure quality and cross-browser compatibility before release.</p>
+    <p><strong>Qualifications:</strong> BTEC, apprenticeship, or relevant experience.</p>
+    <p><strong>Required Skills:</strong></p>
+    <ul>
+      <li>Manual and automated testing</li>
+      <li>Attention to detail</li>
+      <li>Basic HTML/CSS understanding</li>
+      <li>Bug tracking tools (Jira, Trello)</li>
+    </ul>
+    <p><strong>Hours:</strong> 37 hours/week</p>
+    <p><strong>Annual Salary:</strong> £35,000–£55,000</p>
+    <button onclick="location.href='Job Application.html'">Apply</button>
+  </div>
+
+</div>
+
+<div class="page-buttons">
+  <button onclick="showPage(1)">1</button>
+  <button onclick="showPage(2)">2</button>
+</div>
+
+</body>
+</html>

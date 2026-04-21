@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Web Developers - Hot Beans</title>
+<link rel="stylesheet" href="OurWebDevs.css">
+</head>
+<body>
+
+  <div class="topnav">
+    <div class="nav-left">
+      <img src="24.03.2026 logo.png" alt="Hot Beans Logo">
+      <h1>Hot Beans</h1>
+    </div>
+
+<div class="nav-center">
+  <a href="index.html">Home</a>
+  <span class="current-page">Our Web Developers</span>
+  <a href="Job Opportunities.html">Job Opportunities</a>
+  <a href="Job Application.html">Job Application</a>
+  <a href="Web Development Courses.html">Web Development Courses</a>
+</div>
+
+    <div class="nav-right">
+      <a href="Login.html">Account</a>
+    </div>
+  </div>
+
+  <div id="page1" class="card-container page">
+    <div class="card">
+      <h3>Alice Johnson</h3>
+      <h4>Frontend Developer</h4>
+      <div class="details"><strong>Experience:</strong> 5 years</div>
+      <div class="details"><strong>Location:</strong> London, UK</div>
+      <div class="details"><strong>Expertise:</strong> HTML, CSS, React, Accessibility</div>
+      <div class="details"><strong>Skills:</strong> Responsive Design, UI Animations, Cross-Browser Compatibility</div>
+      <div class="details"><strong>Certifications:</strong> Certified React Developer, Accessibility Specialist</div>
+      <div class="details"><strong>Projects:</strong> Portfolio website, E-commerce platform, Internal dashboard</div>
+      <div class="details"><strong>Languages:</strong> English, Spanish</div>
+      <button onclick="showContact('Alice Johnson')">Contact</button>
+    </div>
+
+    <div class="card">
+      <h3>Ben Parker</h3>
+      <h4>Backend Developer</h4>
+      <div class="details"><strong>Experience:</strong> 6 years</div>
+      <div class="details"><strong>Location:</strong> Manchester, UK</div>
+      <div class="details"><strong>Expertise:</strong> Node.js, Python, APIs</div>
+      <div class="details"><strong>Skills:</strong> Database Design, API Development, Server Optimization</div>
+      <div class="details"><strong>Certifications:</strong> AWS Certified Developer, Python Professional</div>
+      <div class="details"><strong>Projects:</strong> RESTful API for fintech, Backend for social media app</div>
+      <div class="details"><strong>Languages:</strong> English, German</div>
+      <button onclick="showContact('Ben Parker')">Contact</button>
+    </div>
+
+    <div class="card">
+      <h3>Clara Smith</h3>
+      <h4>Fullstack Developer</h4>
+      <div class="details"><strong>Experience:</strong> 7 years</div>
+      <div class="details"><strong>Location:</strong> Birmingham, UK</div>
+      <div class="details"><strong>Expertise:</strong> JavaScript, React, Django</div>
+      <div class="details"><strong>Skills:</strong> Frontend & Backend Integration, API Development, Deployment</div>
+      <div class="details"><strong>Certifications:</strong> Fullstack Web Development, Django Expert</div>
+      <div class="details"><strong>Projects:</strong> SaaS product, E-commerce app, CRM system</div>
+      <div class="details"><strong>Languages:</strong> English, French</div>
+      <button onclick="showContact('Clara Smith')">Contact</button>
+    </div>
+  </div>
+
+  <div id="page2" class="card-container page" style="display:none;">
+    <div class="card">
+      <h3>Daniel Lee</h3>
+      <h4>UI/UX Designer</h4>
+      <div class="details"><strong>Experience:</strong> 5 years</div>
+      <div class="details"><strong>Location:</strong> Leeds, UK</div>
+      <div class="details"><strong>Expertise:</strong> Figma, Adobe XD, User Research</div>
+      <div class="details"><strong>Skills:</strong> Wireframing, Prototyping, User Testing</div>
+      <div class="details"><strong>Certifications:</strong> UX Design Professional, Figma Certified</div>
+      <div class="details"><strong>Projects:</strong> Mobile app redesign, SaaS dashboard, E-commerce site</div>
+      <div class="details"><strong>Languages:</strong> English, Japanese</div>
+      <button onclick="showContact('Daniel Lee')">Contact</button>
+    </div>
+
+    <div class="card">
+      <h3>Eva Martinez</h3>
+      <h4>DevOps Engineer</h4>
+      <div class="details"><strong>Experience:</strong> 6 years</div>
+      <div class="details"><strong>Location:</strong> Bristol, UK</div>
+      <div class="details"><strong>Expertise:</strong> AWS, Docker, CI/CD</div>
+      <div class="details"><strong>Skills:</strong> Automation, Deployment Pipelines, Cloud Infrastructure</div>
+      <div class="details"><strong>Certifications:</strong> AWS Certified DevOps Engineer, Docker Specialist</div>
+      <div class="details"><strong>Projects:</strong> CI/CD setup, Cloud migration, Infrastructure automation</div>
+      <div class="details"><strong>Languages:</strong> English, Spanish</div>
+      <button onclick="showContact('Eva Martinez')">Contact</button>
+    </div>
+
+    <div class="card">
+      <h3>Frank Thompson</h3>
+      <h4>Database Specialist</h4>
+      <div class="details"><strong>Experience:</strong> 7 years</div>
+      <div class="details"><strong>Location:</strong> Glasgow, UK</div>
+      <div class="details"><strong>Expertise:</strong> SQL, MongoDB, Data Security</div>
+      <div class="details"><strong>Skills:</strong> Database Optimization, Backup & Recovery, Data Modeling</div>
+      <div class="details"><strong>Certifications:</strong> SQL Expert, MongoDB Certified DBA</div>
+      <div class="details"><strong>Projects:</strong> Data warehouse setup, Security audit, High-availability DBs</div>
+      <div class="details"><strong>Languages:</strong> English, French</div>
+      <button onclick="showContact('Frank Thompson')">Contact</button>
+    </div>
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h3 id="modalName">Developer Name</h3>
+      <p id="modalEmail"><strong>Email:</strong> email@example.com</p>
+      <p id="modalPhone"><strong>Phone:</strong> +44 1234 567890</p>
+    </div>
+  </div>
+
+  <div class="page-buttons">
+    <button onclick="showPage(1)">1</button>
+    <button onclick="showPage(2)">2</button>
+  </div>
+
+<script>
+  function showPage(pageNumber){
+    let pages = document.querySelectorAll(".page");
+    pages.forEach(page => page.style.display = "none");
+    document.getElementById("page" + pageNumber).style.display = "flex";
+  }
+
+  const contacts = {
+    "Alice Johnson": {email:"alice.johnson@hotbeans.com", phone:"+44 7911 123456"},
+    "Ben Parker": {email:"ben.parker@hotbeans.com", phone:"+44 7911 654321"},
+    "Clara Smith": {email:"clara.smith@hotbeans.com", phone:"+44 7911 987654"},
+    "Daniel Lee": {email:"daniel.lee@hotbeans.com", phone:"+44 7911 111222"},
+    "Eva Martinez": {email:"eva.martinez@hotbeans.com", phone:"+44 7911 333444"},
+    "Frank Thompson": {email:"frank.thompson@hotbeans.com", phone:"+44 7911 555666"}
+  };
+
+  function showContact(name){
+    document.getElementById('modalName').innerText = name;
+    document.getElementById('modalEmail').innerText = "Email: " + contacts[name].email;
+    document.getElementById('modalPhone').innerText = "Phone: " + contacts[name].phone;
+    document.getElementById('contactModal').style.display = "flex";
+  }
+
+  function closeModal(){
+    document.getElementById('contactModal').style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    const modal = document.getElementById('contactModal');
+    if(event.target === modal){
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
