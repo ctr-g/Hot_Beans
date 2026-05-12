@@ -23,6 +23,7 @@ body {
 .nav-left img {
   width: 175px;
   height: 80px;
+  background: transparent;
 }
 .nav-left h1 {
   color: white;
