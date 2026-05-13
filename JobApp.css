@@ -241,4 +241,16 @@ option {
     font-size: 12px;
     padding: 8px;
   }
+  * {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  overflow-x: hidden;
+}
 }
