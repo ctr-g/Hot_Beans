@@ -89,6 +89,12 @@ body {
   background-color: #ff4500;      
   transform: scale(1.1);
 }
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 
 h1 {
   color: white;
