@@ -1,7 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: white;
+font-family:
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  sans-serif;  background-color: white;
   color: #eee;
 }
 
