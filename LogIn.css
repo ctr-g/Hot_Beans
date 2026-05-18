@@ -5,8 +5,11 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  height: 100vh;
+font-family:
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  sans-serif;  height: 100vh;
   background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
   display: flex;
   justify-content: center;
