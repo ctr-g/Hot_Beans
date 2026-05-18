@@ -1,9 +1,21 @@
 body {
   background-color: white;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
-  color: #333;
+  color: #eee;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.logo-title img {
+  width: 85px;
+  height: 80px;
+  background: transparent;
 }
 
 .topnav {
@@ -27,9 +39,7 @@ body {
 .nav-left img {
   width: 175px;
   height: 80px;
-  background: transparent;
 }
-
 .nav-left h1 {
   color: white;
   margin: 0;
@@ -86,18 +96,6 @@ body {
   }
 }
 
-.logo-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  color: white;
-}
-
-.logo-title img {
-  width: 85px;
-  height: 80px;
-}
 
 .topnav h2 {
   color: white;
